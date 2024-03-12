@@ -39,6 +39,7 @@ func Worker(in <-chan int64, out chan<- int64) {
 			break
 		}
 		out <- v
+		time.Sleep(time.Millisecond)
 	}
 }
 
